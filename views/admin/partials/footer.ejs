@@ -1,0 +1,64 @@
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const button = document.getElementById('toggle-btn');
+  const icon = button.querySelector('i');
+
+  const quill = new Quill('#editor', {
+    theme: 'snow',
+    modules: {
+      toolbar: [
+        [{ 'header': [1, 2, 3, false] }],
+        [{ 'font': [] }],
+        [{ 'size': ['small', 'medium', 'large', 'huge'] }],
+        ['bold', 'italic', 'underline', 'strike'],
+        [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+        [{ 'align': [] }],
+        [{ 'color': [] }, { 'background': [] }],
+        ['link', 'image'],
+        ['blockquote'],
+        [{ 'script': 'sub' }, { 'script': 'super' }],
+        [{ 'indent': '-1' }, { 'indent': '+1' }],
+      ]
+    }
+  });
+
+  quill.getModule('toolbar').addHandler('image', () => {
+    var range = quill.getSelection();
+    var input = document.createElement('input');
+    input.setAttribute('type', 'file');
+    input.setAttribute('accept', 'image/*');
+    input.click();
+
+    input.onchange = () => {
+      var file = input.files[0];
+      var formData = new FormData();
+      formData.append('image', file);
+
+      fetch('/upload-image', {
+        method: 'POST',
+        body: formData
+      }).then(response => response.json())
+        .then(result => {
+          quill.insertEmbed(range.index, 'image', result.url);
+        });
+    };
+  });
+</script>
+<script>
+  const form = document.querySelector('form');
+  form.onsubmit = function() {
+    // Ambil input hidden untuk konten
+    const kontenInput = document.querySelector('input[name=konten]');
+    
+    // Set nilai input hidden dengan konten dari Quill editor
+    kontenInput.value = quill.root.innerHTML;
+
+    // Pastikan nilai konten tidak undefined
+    console.log("Konten yang dikirim:", kontenInput.value);
+  };
+</script>
+</body>
+
+</html>

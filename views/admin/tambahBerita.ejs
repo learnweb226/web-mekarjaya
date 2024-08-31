@@ -1,0 +1,68 @@
+<%- include("partials/header") %>
+  <div class="container mt-5">
+    <h2>Tambah Berita Baru</h2>
+    <form action="/simpan-berita" method="post">
+      <div class="mb-3"> 
+        <label for="judul" class="form-label">Judul Berita:</label>
+        <input type="text" class="form-control" id="judul" name="judul" required>
+      </div>
+      <div class="mb-3">
+        <label for="penulis" class="form-label">Penulis Berita:</label>
+        <input type="text" class="form-control" id="penulis" name="penulis" required>
+      </div>
+      <div class="mb-3">
+        <label for="konten" class="form-label">Konten Berita:</label>
+        <div id="editor" style="height: 300px;"></div>
+        <input type="hidden" name="konten" id="konten">
+      </div>
+      <div class="mb-3">
+        <label for="tanggal" class="form-label">Tanggal Posting:</label>
+        <input type="date" class="form-control" id="tanggal" name="tanggal">
+      </div>
+      <button type="submit" class="btn btn-primary">Simpan Berita</button>
+    </form>
+
+    <!-- Tabel Informasi Berita -->
+    <div class="mt-5 pt-5">
+      <h3>Informasi Berita</h3>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Judul</th>
+            <th>Penulis</th>
+            <th>Konten Berita</th>
+            <th>Tanggal</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Contoh baris data berita -->
+          <tr>
+            <td>1</td>
+            <td>Berita Contoh 1</td>
+            <td>Penulis 1</td>
+            <td>Ini adalah contoh content berita</td>
+            <td>2024-08-31</td>
+            <td>
+              <button class="btn btn-info btn-sm">Edit</button>
+              <button class="btn btn-danger btn-sm">Hapus</button>
+            </td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Berita Contoh 1</td>
+            <td>Penulis 1</td>
+            <td>Ini adalah contoh content berita</td>
+            <td>2024-08-31</td>
+            <td>
+              <button class="btn btn-info btn-sm">Edit</button>
+              <button class="btn btn-danger btn-sm">Hapus</button>
+            </td>
+          </tr>
+          <!-- Tambahkan baris data lainnya di sini -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+<%- include("partials/footer") %>

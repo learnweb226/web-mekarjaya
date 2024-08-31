@@ -1,0 +1,13 @@
+<%- include("partials/header"); %>
+
+<div class="container mt-5 pt-5">
+  <h2 class="text-center"><%= berita.judul_berita %></h2>
+  <hr>
+  <p class="text-muted">Ditulis oleh: <%= berita.penulis %> pada <%= berita.tanggal_posting.toLocaleDateString() %></p>
+  <div class="konten-berita">
+    <%- berita.konten_berita %>
+  </div>
+  <a href="/berita-terbaru" class="btn btn-secondary mt-4">Kembali ke Daftar Berita</a>
+</div>
+
+<%- include("partials/footer"); %>

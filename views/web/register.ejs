@@ -1,0 +1,32 @@
+<%- include("partials/header"); %>
+
+<div class="container" style="padding-top: 100px;">
+  <div class="container" style="width: 320px; padding: 45px 25px; box-shadow: 0 0 30px rgba(0, 0, 0, 0.15); border-radius: 8px;">
+    <h1>Register</h1>
+
+    <% if (typeof error !== 'undefined' && error) { %>
+      <div class="alert alert-danger flex" role="alert">
+        <%= error %>
+      </div>
+    <% } %>
+
+    <hr class="mb-5">
+    <form action="/admin-webpdesa/register" method="POST">
+      <div class="mb-3">
+        <label for="fullname" class="form-label">Fullname</label>
+        <input type="text" class="form-control" name="fullname" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" name="email">
+      </div>
+      <div class="mb-5">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" name="password">
+      </div>
+      <button style="width: 100%;" type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+  </div>
+</div>
+
+<%- include("partials/footer"); %>

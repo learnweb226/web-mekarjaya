@@ -1,0 +1,36 @@
+<%- include("partials/header"); %>
+
+  <div class="container mt-5 pt-5">
+    <h2 class="text-center">Berita Terbaru Desa Mekarjaya</h2>
+    <hr>
+    <hr>
+
+    <!-- Tampilkan berita yang diambil dari database -->
+    <div class="row">
+      <% if (daftarBerita.length> 0) { %>
+        <% daftarBerita.forEach(berita => { %>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+<!-- gambar -->
+              <div class="card-body">
+                <h5 class="card-title">
+                  <%= berita.judul_berita %>
+                </h5>
+                <!-- <p class="card-text">
+                  <%= berita.konten_berita.substring(0, 100) %>...
+                </p> -->
+                <p class="text-muted">Ditulis oleh: <%= berita.penulis %> pada <%=
+                      berita.tanggal_posting.toLocaleDateString() %>
+                </p>
+                <a href="/berita/<%= berita.id %>" class="btn btn-primary">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+          <% }); %>
+      <% } else { %>
+        <p class="text-center">Belum ada berita yang dipublikasikan.</p>
+      <% } %>
+    </div>
+  </div>
+
+  <%- include("partials/footer"); %>

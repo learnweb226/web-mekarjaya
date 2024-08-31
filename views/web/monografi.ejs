@@ -1,0 +1,482 @@
+<%- include("partials/header"); %>
+
+<div class="container mt-5 pt-5">
+  <h2 class="text-center mt-5">Monografi Desa Mekarjaya</h2>
+  <hr>
+  <hr>
+
+  <h3 class="mt-5 pt-5">Profile wilayah</h3>
+  <ol>
+    <li><b>Letak dan Batas Desa</b></li>
+    <p>
+      Desa Mekarjaya termasuk wilayah Kecamatan Pacet Kabupaten Bandung dengan Luas Wilayah 877,807 Ha. Daratan dengan ketinggian rat-rata 600 m atas permukaan laut. Secara administratif wilayah Desa Mekarjaya dibatasi oleh :
+    </p>
+    <ul>
+      <li>Sebelah utara, Desa Mekarsari Kecamatan Pacet</li>
+      <li>Sebelah Selatan, Desa Cinanggela Kecamatan Pacet</li>
+      <li>Sebelah Timur, Desa Maruyung Kecamatan Pacet</li>
+      <li>Sebelah Barat, Desa Babakan Kecamatan Ciparay</li>
+    </ul><br>
+    <p>
+      Secara Visualisasi, wilayah administrasi Desa Mekarjaya dapat dilihat Pada Peta sbb :
+    </p>
+    <div class="text-center mb-5 pb-5">
+      <img  width="50%" src="/img/peta.jpeg" alt="peta">
+    </div>
+
+    <li><b>Hidrologi dan Kalimatologi</b></li>
+    <p>
+      Berdasarkan hidrologinya, aliran-aliran sungai yang ada di wilayah Desa Mekarjaya membentuk pola Daerah Aliran Sungai (DAS) Citarum. Tercatat beberapa sungai maupun selokan yang terdapat di Desa Mekarjaya, yaitu :
+    </p>
+    <ol>
+      <li>Sungai Cikoneng yang berbatasan dengan Desa Maruyung Kecamatan Pacet</li>
+      <li>Sungai Cikatulampa yang berbatasan dengan Desa maruyung Kecamatan Pacet</li>
+      <li>Sungai Cianjing	yang berbatasan dengan Desa Cinanggela Kecamatan Pacet</li>
+    </ol><br>
+    <p>
+      Selain itu, mata air utama yang dapat digunakan sebagai sumber air bersih untuk pertanian yang terdapat di Desa Mekarjaya diantaranya adalah sbb :
+    </p>
+    <ol>
+      <li>Mata Air Cihanja yang terdapat di kampung Pasir Pogor Lebak</li>
+      <li>Mata Air Ciwalen yang terdapat di Kampung Cipatat</li>
+      <li>Mata Air Toblong yang terdapat di Kampung Paninggaran</li>
+    </ol><br>
+    <p>
+      Berikut ini sumber air bersih yang aktif saat musim kemarau dan musim penghujan :
+    </p>
+  
+    <div class="container mt-5">
+      <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+          <tr style="vertical-align: middle; text-align: center;">
+            <th scope="col">Sumber Air Bersih</th>
+            <th scope="col">Musim Hujan</th>
+            <th scope="col">Musim Kemarau</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row">Sumur Pompa</td>
+            <td>40 unit</td>
+            <td>20 unit</td>
+          </tr>
+          <tr>
+            <td scope="row">Sumur Gali</td>
+            <td>850 unit</td>
+            <td>575 unit</td>
+          </tr>
+          <tr>
+            <td scope="row">Mata Air, PMA</td>
+            <td>2 Lokasi</td>
+            <td>2 lokasi</td>
+          </tr>
+          <tr>
+            <td scope="row">Sungai</td>
+            <td>3 Lokasi</td>
+            <td>3 lokasi</td>
+          </tr>
+        </tbody>
+      </table>
+    </div><br>
+
+    <li><b>Pemanfaatan Lahan</b></li>
+    <p>
+      Pada umumnya, lahan yang terdapat di Desa Mekarjaya digunakan secara produktif dan hanya sedikit saja yang tidak digunakan. Hal ini menunjukan bahwa kawasan Desa Mekarjaya memiliki sumber daya alam yang memadai dan sipa untuk diolah. Berikut ini Luas lahan menurut jenis penggunaannnya.
+    </p>
+    <div class="container">
+      <canvas id="myChart" width="400" height="200"></canvas>
+    </div><br><br>
+
+    <li><b>Keadaan Sosial Penduduk Desa Mekarjaya</b></li>
+    <ul>
+      <li>Kependudukan</li>
+      <p>
+        Jumlah Penduduk Desa Mekarjaya tahun  2013- 2018  adalah sebagi berikut :
+      </p>
+
+      <div style="max-width: 500px; min-width: 300px;">
+        <canvas id="myChart1"></canvas>
+      </div><br>
+  
+      <p>Jumlah Rumah Tangga dan jiwa di Desa Mekarjaya sbb :</p>
+  
+      <p><b>Jumlah Penduduk Berdasarkan Jenis Kelamin per RW.</b></p>
+      <canvas id="genderChart" style="width: 600px;"></canvas><br><br>
+  
+      <p><b>Distribusi Jumlah Penduduk Total per RW</b></p>
+      <div style="max-width: 500px; min-width: 300px;">
+        <canvas id="populationPieChart"></canvas><br>
+      </div>
+  
+      <p><b>Jumlah Rumah Tangga/KK per RW</b></p>
+      <canvas id="householdChart" style="width: 600px;"></canvas><br>
+      <p class="text-center"><i>Sumber : Hasil pengkajian keadaa n Desa (Musdus) Tahun 2019</i></p>
+
+      <li>Tenaga Kesehatan</li>
+
+      <div class="container mt-5">
+        <table class="table table-striped table-bordered">
+          <thead class="table-dark">
+              <tr style="vertical-align: middle; text-align: center;">
+                  <th scope="col">No</th>
+                  <th scope="col">Tenaga Kesehatan</th>
+                  <th scope="col">Jenis</th>
+                  <th scope="col">Jumlah</th>
+                  <th scope="col">Keterangan</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td rowspan="2" scope="row">1</td>
+                  <td rowspan="2">Medis</td>
+                  <td>Dokter Umum</td>
+                  <td>-</td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td scope="row">Dokter Spesialis</td>
+                  <td>-</td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td rowspan="2" scope="row">2</td>
+                  <td rowspan="2">Keperawatan</td>
+                  <td>Bidan</td>
+                  <td>1 Orang</td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td scope="row">Perawat</td>
+                  <td>-</td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td rowspan="7" scope="row">3</td>
+                  <td rowspan="7">Partisipasi Masyarakat</td>
+                  <td>Dukun Bayi</td>
+                  <td>4 Orang</td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td scope="row">Posyandu</td>
+                  <td>12 Orang</td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td scope="row">Polindes</td>
+                  <td>1 Unit</td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td scope="row">POD</td>
+                  <td>-</td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td scope="row">Desa Siaga</td>
+                  <td>1 Orang</td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td scope="row">Paraji Sunat</td>
+                  <td>-</td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td scope="row">Kader Kesehatan</td>
+                  <td>60 Orang</td>
+                  <td></td>
+              </tr>
+          </tbody>
+      </table>      
+      </div>
+      <p class="text-center"><i>Sumber : data Desa dan Desa Siaga Desa Mekarjaya</i></p>
+    </ul>
+    <br>
+    <li><b>Pendidikan</b></li><br>
+    <div>
+      <canvas id="educationChart"></canvas>
+    </div>
+    <br>
+    <br>
+    <li><b>Sarana Pendidikan</b></li><br>
+    <div>
+        <canvas id="educationChart3" width="400" height="200"></canvas>
+    </div>
+  </ol>
+
+</div>
+
+<script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: [
+                'Luas Wilayah',
+                'Sawah Teknis',
+                'Sawah ½ Teknis',
+                'Sawah Tadah Hujan',
+                'Tanah Kering',
+                'Tanah Basah',
+                'Hutan Rakyat',
+                'Hutan Negara',
+                'Perkebunan',
+                'Fasilitas Umum'
+            ],
+            datasets: [{
+                label: 'Luas (ha)',
+                data: [877807, 0, 60000, 50.25, 37524, 0.25, 8425, 546495, 162.85, 0.20],
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(153, 102, 255, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(153, 102, 255, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    // ========
+    const ctx1 = document.getElementById('myChart1').getContext('2d');
+        const myChart1 = new Chart(ctx1, {
+            type: 'pie',
+            data: {
+                labels: [
+                    '2013',
+                    '2015',
+                    '2016',
+                    '2019',
+                    '2020'
+                ],
+                datasets: [{
+                    label: 'Jumlah Penduduk (Jiwa)',
+                    data: [7799, 7354, 7924, 7998, 8491],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    }
+                }
+            }
+        });
+
+        // Data
+        const labels = ['RW 01', 'RW 02', 'RW 03', 'RW 04', 'RW 05', 'RW 06', 'RW 07', 'RW 08', 'RW 09', 'RW 10', 'RW 11', 'RW 12'];
+        const males = [400, 477, 377, 441, 266, 214, 229, 590, 348, 186, 321, 235];
+        const females = [380, 440, 357, 363, 243, 205, 335, 493, 377, 178, 356, 187];
+        const households = [300, 291, 226, 214, 229, 590, 348, 186, 321, 100, 190, 125];
+        const totalPopulation = [780, 917, 734, 804, 509, 419, 564, 1083, 725, 364, 677, 422];
+
+        new Chart(document.getElementById('genderChart'), {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Males',
+                        data: males,
+                        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Females',
+                        data: females,
+                        backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // pie char
+        new Chart(document.getElementById('populationPieChart'), {
+            type: 'pie',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Total Population',
+                    data: totalPopulation,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(153, 102, 255, 0.6)',
+                        'rgba(255, 159, 64, 0.6)',
+                        'rgba(199, 199, 199, 0.6)',
+                        'rgba(83, 102, 255, 0.6)',
+                        'rgba(122, 209, 76, 0.6)',
+                        'rgba(75, 100, 200, 0.6)',
+                        'rgba(205, 99, 255, 0.6)',
+                        'rgba(125, 205, 98, 0.6)'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    }
+                }
+            }
+        });
+
+        // Bar Chart
+        new Chart(document.getElementById('householdChart'), {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Jumlah Rumah Tangga/KK',
+                    data: households,
+                    backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+
+        const ctx_educationChart = document.getElementById('educationChart').getContext('2d');
+        const educationChart = new Chart(ctx_educationChart, {
+            type: 'bar',
+            data: {
+                labels: [
+                    'PAUD', 
+                    'TDK TAMAT SD/MI', 
+                    'MASIH SD/MI', 
+                    'TAMAT SD/MI', 
+                    'MASIH SLTP', 
+                    'TAMAT SLTP', 
+                    'MASIH SLTA', 
+                    'TAMAT SLTA', 
+                    'MASIH PT', 
+                    'TAMAT PT', 
+                    'TIDAK / BELUM SEKOLAH'
+                ],
+                datasets: [{
+                    label: 'Jumlah Orang',
+                    data: [75, 436, 809, 2192, 497, 1146, 201, 772, 48, 163, 1090],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // pkok
+        const ctx3 = document.getElementById('educationChart3').getContext('2d');
+        const educationChart3 = new Chart(ctx3, {
+            type: 'bar',
+            data: {
+                labels: ['TK/PAUD/RA', 'SD', 'MI', 'SLTP', 'SLTA', 'Perguruan Tinggi', 'PKBM'],
+                datasets: [{
+                    label: 'Jumlah Unit',
+                    data: [6, 4, 3, 3, 2, 0, 1],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(99, 255, 132, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(99, 255, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 1
+                        }
+                    }
+                }
+            }
+        });
+</script>
+
+<%- include("partials/footer"); %>

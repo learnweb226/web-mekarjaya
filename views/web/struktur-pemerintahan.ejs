@@ -1,0 +1,62 @@
+<%- include("partials/header"); %>
+
+<div class="container mt-5 pt-5">
+  <h2 class="text-center">Struktur Pemerintahan Desa Mekarjaya</h2>
+  <hr>
+  <hr><br>
+  <p>
+    Desa Mekarjaya terbagi menjadi 4 (empat) dusun, 12 RW, 36 RT dengan rata -rata jumlah KK Perdusun 748 KK, dengan perincian sebagai berikur :
+  </p>
+  
+  <div class="container my-5">
+    <canvas id="dusunChart" width="400" height="200"></canvas>
+  </div>
+
+  <div>
+    <h5  class="text-center pt-5">Struktur pemerintahan Desa Mekarjaya</h5><br>
+    <img style="width: 80%;" class="text-center" src="/img/bagan-organisasi.png" alt="bagan-organisasi">
+  </div>
+
+</div>
+
+<script>
+  const ctx = document.getElementById('dusunChart').getContext('2d');
+  const dusunChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: ['Dusun I', 'Dusun II', 'Dusun III', 'Dusun IV'],
+          datasets: [
+              {
+                  label: 'RW',
+                  data: [3, 3, 3, 3],
+                  backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                  borderColor: 'rgba(75, 192, 192, 1)',
+                  borderWidth: 1
+              },
+              {
+                  label: 'RT',
+                  data: [9, 10, 8, 9],
+                  backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                  borderColor: 'rgba(54, 162, 235, 1)',
+                  borderWidth: 1
+              },
+              {
+                  label: 'KK',
+                  data: [866, 744, 638, 0], // Assuming '0' for Dusun IV's KK
+                  backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                  borderColor: 'rgba(255, 206, 86, 1)',
+                  borderWidth: 1
+              }
+          ]
+      },
+      options: {
+          scales: {
+              y: {
+                  beginAtZero: true
+              }
+          }
+      }
+  });
+</script>
+
+<%- include("partials/footer"); %>
