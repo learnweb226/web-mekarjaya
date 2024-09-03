@@ -2,12 +2,12 @@ const jwt = require('jsonwebtoken');
 require("dotenv").config()
 
 const generateToken = (payload) => {
-  return jwt.sign(payload, process.env.SECRET_JWT, { expiresIn: '1h' });
+  return jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' });
 };
 
 const verifyToken = (token) => {
   try {
-    return jwt.verify(token, process.env.SECRET_JWT);
+    return jwt.verify(token, process.env.JWT_SECRET);
   } catch (error) {
     throw new Error('Invalid token');
   }

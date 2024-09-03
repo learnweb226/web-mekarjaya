@@ -31,22 +31,36 @@
             <th>ID</th>
             <th>Judul</th>
             <th>Penulis</th>
+            <th>Konten Berita</th>
             <th>Tanggal</th>
             <th>Aksi</th>
           </tr>
         </thead>
         <tbody>
-          <% daftarBerita.forEach(function(berita) { %>
-            <tr>
-              <td><%= berita.id %></td>
-              <td><%= berita.judul_berita %></td>
-              <td><%= berita.penulis %></td>
-              <td><%= berita.tanggal_posting %></td>
-              <td>
-                <a href="/hapus-berita/<%= berita.id %>" class="btn btn-danger btn-sm">Hapus</a>
-              </td>
-            </tr>
-          <% }); %>
+          <!-- Contoh baris data berita -->
+          <tr>
+            <td>1</td>
+            <td>Berita Contoh 1</td>
+            <td>Penulis 1</td>
+            <td>Ini adalah contoh content berita</td>
+            <td>2024-08-31</td>
+            <td>
+              <button class="btn btn-info btn-sm">Edit</button>
+              <button class="btn btn-danger btn-sm">Hapus</button>
+            </td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Berita Contoh 1</td>
+            <td>Penulis 1</td>
+            <td>Ini adalah contoh content berita</td>
+            <td>2024-08-31</td>
+            <td>
+              <button class="btn btn-info btn-sm">Edit</button>
+              <button class="btn btn-danger btn-sm">Hapus</button>
+            </td>
+          </tr>
+          <!-- Tambahkan baris data lainnya di sini -->
         </tbody>
       </table>
     </div>

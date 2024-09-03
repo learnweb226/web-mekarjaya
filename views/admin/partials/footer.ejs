@@ -49,8 +49,13 @@
 <script>
   const form = document.querySelector('form');
   form.onsubmit = function() {
+    // Ambil input hidden untuk konten
     const kontenInput = document.querySelector('input[name=konten]');
+    
+    // Set nilai input hidden dengan konten dari Quill editor
     kontenInput.value = quill.root.innerHTML;
+
+    // Pastikan nilai konten tidak undefined
     console.log("Konten yang dikirim:", kontenInput.value);
   };
 </script>
